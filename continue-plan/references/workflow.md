@@ -15,7 +15,7 @@ Maintain these records where needed; accept equivalent existing fields without b
 - Resume: remaining work, blockers and the next concrete action or command. Clear when closeout is complete.
 - Carry-over: constraints or work for later slices, distinct from this slice's remaining work.
 
-Recheck relevant Preflight Findings and Carry-over against actual code. Maintain translations only where project or document instructions require them. New plans default to English; existing translated plans retain their synchronization contract.
+Recheck relevant Preflight Findings and Carry-over against actual code. Write plans in English and keep a Simplified Chinese translation beside each new plan, named `<plan>.zh-CN.md`. The English plan is authoritative; whenever a plan with a translation changes, including status, decisions, verification and resume records, update the translation in the same change with equivalent content. Keep status values, slice tags, identifiers, paths, commands and Given/When/Then keywords in English in the translation. Maintain other translations where project or document instructions require them.
 
 ## Resume One Slice
 
@@ -61,6 +61,8 @@ Use the shared continue-plan skill; resume one slice or outstanding closeout und
 - Resume:
 - Carry-over:
 ```
+
+Create the plan's Chinese translation as described in "Plan and State", opening with a note that links the English plan and states that it is authoritative.
 
 Present the plan for review, commit only when authorized, and stop before implementation unless the user requested it too.
 
