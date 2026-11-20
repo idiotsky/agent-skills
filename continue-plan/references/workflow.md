@@ -8,6 +8,8 @@ The specification owns behavior; the plan owns slice scope, dependencies, status
 
 Use `pending`, `in progress` and `done`. Start work as `in progress`. Set `done` only after acceptance criteria, required checks and review pass and the agreed delivery is ready to be completed. If the project requires a commit per slice, keep verified work `in progress` while awaiting commit authorization; set `done` in the plan as part of the authorized commit with the implementation. If committing fails, restore `in progress` and record the outstanding closeout. A commitless delivery is complete only when project or user instructions allow it. Never infer publication permission from a completed status.
 
+The plan header also carries a plan-level `Status:` line. Set it to `done` only in the change that completes the last slice and leaves no outstanding closeout; set it back to `in progress` when a slice is added or completed work is reopened. Discovery skips plans marked `done`, so never mark a plan `done` early. A plan without this line is judged by its slice statuses; add the line when the plan is next edited.
+
 Maintain these records where needed; accept equivalent existing fields without bulk migration:
 
 - Decisions: decisions and reasons; approved behavior or contract changes also belong in the owning specification.
@@ -37,6 +39,7 @@ Put the plan next to its specification. Use a `-Plan.md` suffix, preserving exis
 # <Title> — Implementation Plan
 
 Spec: [<Title>](<spec-file>.md)
+Status: pending
 Slice tag: `<tag>`
 Delivery: <project-required completion and commit requirements>
 
