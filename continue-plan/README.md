@@ -4,7 +4,8 @@ Shared agent skill for delivering a specification in reviewable slices: it resum
 
 ## Use
 
-- Codex and Claude Code: `/continue-plan [plan path or filename fragment]`. Codex also accepts `$continue-plan`.
+- Codex: `$continue-plan [plan path or filename fragment]`.
+- Claude Code: `/continue-plan [plan path or filename fragment]`.
 - Either agent also picks the skill up from requests such as "continue the multi-tab plan".
 
 Every new plan gets a Simplified Chinese translation (`<plan>.zh-CN.md`) that the skill keeps in sync with the authoritative English plan. Other project rules (plan location, further translations, commit requirements, quality gates) stay in each repository's `AGENTS.md`; this skill does not replace them.
